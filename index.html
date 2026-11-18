@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="rw">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101018">
+  <title>DIEUDONNE MUSIC | Editor Pro</title>
+  <meta name="description" content="DIEUDONNE MUSIC — umuziki, amashusho n'ibikorwa bya DIEUDONNE EDITOR PRO.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="DIEUDONNE MUSIC home">
+      <span class="brand-mark">DM</span>
+      <span><strong>DIEUDONNE</strong><small>MUSIC • EDITOR PRO</small></span>
+    </a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Fungura menu">☰</button>
+    <nav id="nav">
+      <a href="#music">Indirimbo</a><a href="#videos">Video</a><a href="#portfolio">Ibikorwa</a><a href="#contact">Twandikire</a>
+      <button id="authOpen" class="button button-outline">Injira / Iyandikishe</button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">UMUZIKI • VIDEO • UBUHANZI</p>
+        <h1>Ikaze kuri <span>DIEUDONNE MUSIC</span></h1>
+        <p>Umva indirimbo, reba amashusho, kandi umenye ibikorwa bya DIEUDONNE EDITOR PRO.</p>
+        <div class="hero-actions"><a class="button" href="#music">Tega amatwi</a><a class="button button-outline" href="#contact">Twandikire</a></div>
+        <p class="small muted">Urubuga rukora kuri telefoni na mudasobwa.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="disc"><div></div></div><span class="sound sound-one">♪</span><span class="sound sound-two">♫</span></div>
+    </section>
+
+    <section id="music" class="section">
+      <div class="section-head"><div><p class="eyebrow">ISOMERO RY'UMUZIKI</p><h2>Indirimbo</h2></div>
+        <input id="musicSearch" class="search" type="search" placeholder="Shakisha indirimbo cyangwa umuririmbyi…" aria-label="Shakisha indirimbo">
+      </div>
+      <div id="musicStatus" class="notice">Indirimbo zizagaragara hano. Huza Supabase kugira ngo ubike kandi usangize indirimbo kuri internet.</div>
+      <div id="musicGrid" class="media-grid"></div>
+    </section>
+
+    <section id="videos" class="section section-alt">
+      <div class="section-head"><div><p class="eyebrow">AMASHUSHO</p><h2>Video</h2></div></div>
+      <div id="videoGrid" class="media-grid"></div>
+      <p id="videoEmpty" class="muted">Amashusho azagaragara hano igihe azaba yongewemo.</p>
+    </section>
+
+    <section id="portfolio" class="section">
+      <div class="section-head"><div><p class="eyebrow">IBYO NKORA</p><h2>DIEUDONNE EDITOR PRO</h2></div></div>
+      <div class="feature-grid">
+        <article class="feature"><span>♫</span><h3>Music</h3><p>Gusangiza indirimbo no kumva amajwi.</p></article>
+        <article class="feature"><span>▶</span><h3>Video editing</h3><p>Gushyira ahagaragara amashusho n'ibikorwa byawe.</p></article>
+        <article class="feature"><span>▧</span><h3>Photos & portfolio</h3><p>Kwerekana amafoto n'ibikorwa by'umwuga.</p></article>
+        <article class="feature"><span>✉</span><h3>Contact</h3><p>Kuvugana na DIEUDONNE EDITOR PRO.</p></article>
+      </div>
+    </section>
+
+    <section id="admin" class="section section-alt hidden">
+      <div class="section-head"><div><p class="eyebrow">ABAYOBOZI</p><h2>Ongeraho indirimbo cyangwa video</h2></div></div>
+      <form id="uploadForm" class="upload-form">
+        <label>Ubwoko <select id="uploadType"><option value="music">Indirimbo (audio)</option><option value="video">Video</option></select></label>
+        <label>Izina ry'igikorwa <input id="uploadTitle" required maxlength="120" placeholder="Urugero: Yesu ni ibyiringiro"></label>
+        <label>Umuhanzi / uwakoze <input id="uploadArtist" maxlength="120" placeholder="Izina ry'umuhanzi"></label>
+        <label>Igifuniko (bidakenewe) <input id="uploadCover" type="file" accept="image/*"></label>
+        <label>Fayili <input id="uploadFile" type="file" required accept="audio/*,video/*"></label>
+        <button class="button" type="submit">Ohereza kuri website</button>
+        <p id="uploadStatus" class="small muted">Gushyiraho bisaba konti yemewe y'umuyobozi na Supabase Storage.</p>
+      </form>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div><p class="eyebrow">TWANDIKIRE</p><h2>Ufite umushinga?</h2><p>Vugana na DIEUDONNE EDITOR PRO kuri WhatsApp cyangwa utwoherereze ubutumwa.</p>
+        <a class="button" href="https://wa.me/2507287947070" target="_blank" rel="noopener">Vugana kuri WhatsApp</a>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <label>Izina ryawe<input id="contactName" required maxlength="100" placeholder="Andika izina"></label>
+        <label>Email cyangwa telefoni<input id="contactReply" required maxlength="160" placeholder="Uko twagusubiza"></label>
+        <label>Ubutumwa<textarea id="contactMessage" required rows="4" maxlength="2000" placeholder="Andika ubutumwa bwawe"></textarea></label>
+        <button class="button button-outline" type="submit">Tegura ubutumwa</button>
+        <p id="contactStatus" class="small muted">Ubutumwa buzategurwa muri email yawe cyangwa ushobora kubwohereza kuri WhatsApp.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">DM</span><span><strong>DIEUDONNE MUSIC</strong><small>© <span id="year"></span> • All rights reserved</small></span></a><p>Yakozwe na DIEUDONNE EDITOR PRO</p></footer>
+
+  <dialog id="authDialog">
+    <button class="dialog-close" id="authClose" aria-label="Funga">×</button>
+    <p class="eyebrow">KONTI YAWE</p><h2>Injira cyangwa wiyandikishe</h2>
+    <form id="authForm">
+      <label>Email<input id="authEmail" type="email" required autocomplete="email" placeholder="izina@example.com"></label>
+      <label>Ijambo ry'ibanga<input id="authPassword" type="password" required minlength="6" autocomplete="current-password" placeholder="Nibura inyuguti 6"></label>
+      <div class="auth-actions"><button class="button" type="submit" id="loginBtn">Injira</button><button class="button button-outline" type="button" id="signupBtn">Iyandikishe</button></div>
+      <p id="authStatus" class="small muted">Ukeneye gushyiraho Supabase kugira ngo konti zikore.</p>
+    </form>
+  </dialog>
+  <div id="toast" role="status" class="toast hidden"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

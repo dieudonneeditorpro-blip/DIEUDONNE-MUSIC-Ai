@@ -1,2 +1,2 @@
-# DIEUDONNE-MUSIC-Ai
-Kumva nokureba nogukora nokureba video nziza
+# CODE_OF_CONDUCT.md
+CODE_OF_CONDUCT.md
